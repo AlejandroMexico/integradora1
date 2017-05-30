@@ -1,0 +1,10 @@
+<h1>UTFV App</h1>
+
+<p>Hola <%= @user.name %>,</p>
+
+<p>
+  Bienvenido a la UTFV da click abajo para activar tu cuenta
+</p>
+
+<%= link_to "Activar", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>
